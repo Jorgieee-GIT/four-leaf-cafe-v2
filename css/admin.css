@@ -1,0 +1,50 @@
+.admin-head { padding-block: clamp(2rem, 5vw, 3rem) 0; }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; padding-block: 1.75rem 0; }
+.stat { background: var(--smoky-black); color: var(--floral-white); border-radius: var(--radius); padding: 1.4rem 1.6rem; }
+.stat:nth-child(2) { background: var(--olive-drab); }
+.stat:nth-child(3) { background: var(--bone); color: var(--smoky-black); }
+.stat span { display: block; font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; opacity: .75; }
+.stat strong { display: block; margin-top: .3rem; font-size: clamp(1.7rem, 3vw, 2.2rem); font-weight: 800; letter-spacing: -0.03em; }
+
+.admin-layout { display: grid; grid-template-columns: minmax(0, 390px) minmax(0, 1fr); gap: clamp(1.25rem, 3vw, 2rem); padding-block: 2rem; align-items: start; }
+.admin-form h2, .admin-products h2, .admin-orders h2 { font-size: 1.5rem; margin-bottom: .5rem; }
+.admin-form { position: sticky; top: calc(var(--header-h) + 1rem); }
+.admin-form input[type="file"] { width: 100%; font: 500 .85rem var(--font); }
+.admin-form .btn { margin-top: 1.6rem; padding-block: 1rem; }
+.admin-note { font-size: .88rem; color: var(--olive-drab); margin-bottom: 1.25rem; }
+.admin-product-card { display: flex; align-items: center; gap: 1rem; background: var(--floral-white); border: 1px solid var(--line); border-radius: var(--radius); padding: .9rem; margin-bottom: .9rem; box-shadow: var(--shadow-sm); }
+.admin-product-card img { width: 88px; height: 88px; border-radius: 16px; object-fit: cover; flex-shrink: 0; }
+.admin-product-card .card-content { flex: 1; min-width: 0; }
+.admin-product-card h3 { font-size: 1.05rem; letter-spacing: -0.02em; }
+.admin-product-card p { font-size: .85rem; color: var(--olive-drab); overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.admin-product-card .price { font-size: 1.05rem; font-weight: 800; color: var(--smoky-black); margin-top: .25rem; }
+.admin-product-actions { display: flex; flex-direction: column; gap: .4rem; }
+.admin-empty { background: var(--soft); border: 1px dashed var(--olive-drab); border-radius: var(--radius); padding: 2rem 1.5rem; text-align: center; color: var(--olive-drab); }
+
+.admin-orders { padding-bottom: 4rem; }
+.table-wrap { overflow-x: auto; background: var(--floral-white); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow-sm); margin-top: 1rem; }
+.table-wrap table { width: 100%; border-collapse: collapse; min-width: 720px; font-size: .9rem; }
+.table-wrap th, .table-wrap td { padding: 1rem 1.25rem; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+.table-wrap th { background: var(--soft); font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--olive-drab); }
+.table-wrap tr:last-child td { border-bottom: 0; }
+.table-wrap small { color: var(--olive-drab); }
+.admin-empty-cell { text-align: center !important; color: var(--olive-drab); padding: 2rem !important; }
+
+.order-detail h2 { margin-bottom: 1rem; }
+.order-detail dl { display: grid; gap: .8rem; margin-bottom: 1.25rem; }
+.order-detail dt { font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--olive-drab); }
+.order-detail dd { font-weight: 600; overflow-wrap: anywhere; }
+.order-detail ul { list-style: none; border-top: 1px solid var(--line); }
+.order-detail li { display: flex; justify-content: space-between; gap: 1rem; padding: .65rem 0; border-bottom: 1px solid var(--line); }
+.order-detail .detail-total { display: flex; justify-content: space-between; margin-top: 1rem; font-size: 1.25rem; font-weight: 800; }
+
+@media (max-width: 900px) { .admin-layout { grid-template-columns: 1fr; } .admin-form { position: static; } }
+@media (max-width: 480px) { .admin-product-card { flex-wrap: wrap; } .admin-product-actions { flex-direction: row; width: 100%; } .admin-product-actions .btn { flex: 1; } }
+
+/* Admin shares the exact same olive, cream and bordered-card system. */
+.stat { border: 1px solid var(--line-strong); }
+.stat:first-child { background: var(--smoky-black); }
+.stat:nth-child(2) { background: var(--olive-drab); }
+.admin-product-card, .table-wrap { border-color: var(--line-strong); }
+.admin-product-card img { border: 1px solid var(--line); }
+.table-wrap th { background: var(--soft); }

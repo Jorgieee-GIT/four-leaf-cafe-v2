@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/images/brand/logo.webp" type="image/webp">
+    <title>F4 - Item</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/item.css">
+</head>
+<body data-root="../" data-require="user">
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="../index.html" aria-label="Four Leaves Café home">
+                <span class="brand-mark" aria-hidden="true">
+                    <img class="brand-logo" src="../assets/images/brand/logo.png" alt="" width="256" height="256" decoding="async">
+                </span>
+                <span class="brand-name">Four Leaves Café</span>
+            </a>
+            <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="siteNav" aria-expanded="false">&#9776;</button>
+            <nav class="site-nav" id="siteNav" aria-label="Main">
+                <a href="menu.html">Menu</a>
+                <a href="orders.html">My Orders</a>
+                <a href="checkout.html">Cart<span class="cart-count" data-cart-count>0</span></a>
+                <a href="../index.html" data-logout>Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <a href="menu.html" class="back-link">&larr; Back to menu</a>
+
+            <section class="product-detail" id="productDetail">
+                <div class="product-image"><img id="productImg" src="../assets/images/brand/logo.webp" alt=""></div>
+                <div class="product-info">
+                    <h1 id="productName"></h1>
+                    <p class="rating">&#9733;&#9733;&#9733;&#9733;&#9734; 4.0 &middot; 36 ratings</p>
+                    <span class="price-badge" id="productPrice">₱0.00</span>
+                    <p class="description" id="productDesc"></p>
+                    <div class="purchase-row">
+                        <div>
+                            <label for="qtyInput">Quantity</label>
+                            <div class="qty-control">
+                                <button type="button" id="qtyDown" aria-label="Decrease quantity">&#8722;</button>
+                                <input type="text" id="qtyInput" value="1" inputmode="numeric">
+                                <button type="button" id="qtyUp" aria-label="Increase quantity">&#43;</button>
+                            </div>
+                        </div>
+                        <div>
+                            <label>Total Amount</label>
+                            <span id="totalAmount">₱0.00</span>
+                        </div>
+                        <button type="button" class="btn btn-primary" id="addToCartBtn">Add to Cart</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="similar" id="similarSection">
+                <h2>Similar Products</h2>
+                <div class="similar-grid" id="similarProductsGrid"></div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms</a>
+                <span>&copy; 2026 Four Leaves Café. All rights reserved.</span>
+            </div>
+            <div class="socials"><a href="#" aria-label="Instagram"><img src="../assets/images/icons/instagram.png" alt=""></a><a href="#" aria-label="Facebook"><img src="../assets/images/icons/facebook.png" alt=""></a><a href="#" aria-label="Twitter"><img src="../assets/images/icons/twitter.png" alt=""></a><a href="#" aria-label="Youtube"><img src="../assets/images/icons/youtube.png" alt=""></a></div>
+        </div>
+    </footer>
+
+    <script src="../js/products.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/item.js"></script>
+</body>
+</html>

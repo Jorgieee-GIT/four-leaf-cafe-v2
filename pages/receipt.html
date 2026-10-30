@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/images/brand/logo.webp" type="image/webp">
+    <title>F4 - Receipt</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/orders.css">
+</head>
+<body data-root="../" data-require="user">
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="../index.html" aria-label="Four Leaves Café home">
+                <span class="brand-mark" aria-hidden="true">
+                    <img class="brand-logo" src="../assets/images/brand/logo.png" alt="" width="256" height="256" decoding="async">
+                </span>
+                <span class="brand-name">Four Leaves Café</span>
+            </a>
+            <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="siteNav" aria-expanded="false">&#9776;</button>
+            <nav class="site-nav" id="siteNav" aria-label="Main">
+                <a href="menu.html">Menu</a>
+                <a href="orders.html" aria-current="page">My Orders</a>
+                <a href="checkout.html">Cart<span class="cart-count" data-cart-count>0</span></a>
+                <a href="../index.html" data-logout>Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="receipt" id="receipt" aria-live="polite"></section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms</a>
+                <span>&copy; 2026 Four Leaves Café. All rights reserved.</span>
+            </div>
+            <div class="socials"><a href="#" aria-label="Instagram"><img src="../assets/images/icons/instagram.png" alt=""></a><a href="#" aria-label="Facebook"><img src="../assets/images/icons/facebook.png" alt=""></a><a href="#" aria-label="Twitter"><img src="../assets/images/icons/twitter.png" alt=""></a><a href="#" aria-label="Youtube"><img src="../assets/images/icons/youtube.png" alt=""></a></div>
+        </div>
+    </footer>
+
+    <script src="../js/products.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/receipt.js"></script>
+</body>
+</html>

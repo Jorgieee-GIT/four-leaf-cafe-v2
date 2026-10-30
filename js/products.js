@@ -1,0 +1,20 @@
+window.FLC_PRODUCTS = [
+    { id: "espresso",              name: "Espresso",              price: 120, img: "espresso.webp",              desc: "A strong and concentrated shot of coffee with rich aroma.", category: ["espresso", "best-seller"] },
+    { id: "americano",             name: "Americano",             price: 140, img: "americano.webp",             desc: "Espresso with hot water, smooth and bold.",               category: ["espresso", "best-seller"] },
+    { id: "cappuccino",            name: "Cappuccino",            price: 160, img: "cappuccino.webp",            desc: "Espresso with steamed milk and foam.",                     category: ["espresso"] },
+    { id: "flat-white",            name: "Flat White",            price: 170, img: "flat-white.webp",            desc: "Creamy espresso drink with thin microfoam.",               category: ["espresso"] },
+    { id: "mocha",                 name: "Mocha",                 price: 180, img: "mocha.webp",                 desc: "Chocolate-infused espresso drink.",                        category: ["espresso"] },
+    { id: "classic-cold-brew",     name: "Classic Cold Brew",     price: 130, img: "classic-cold-brew.webp",     desc: "Cold steeped coffee with smooth finish.",                  category: ["coldbrew"] },
+    { id: "sweet-cream-cold-brew", name: "Sweet Cream Cold Brew", price: 150, img: "sweet-cream-cold-brew.webp", desc: "Cold brew topped with sweet cream.",                       category: ["coldbrew"] },
+    { id: "vanilla-cold-brew",     name: "Vanilla Cold Brew",     price: 140, img: "vanilla-cold-brew.webp",     desc: "Cold brew with vanilla flavour.",                          category: ["coldbrew", "best-seller"] },
+    { id: "caramel-cold-brew",     name: "Caramel Cold Brew",     price: 150, img: "caramel-cold-brew.webp",     desc: "Cold brew with caramel sweetness.",                        category: ["coldbrew"] },
+    { id: "classic-latte",         name: "Classic Latte",         price: 160, img: "classic-latte.webp",         desc: "Espresso with steamed milk.",                              category: ["latte"] },
+    { id: "vanilla-latte",         name: "Vanilla Latte",         price: 170, img: "vanilla-latte.webp",         desc: "Espresso with vanilla syrup and milk.",                    category: ["latte"] },
+    { id: "caramel-latte",         name: "Caramel Latte",         price: 170, img: "caramel-latte.webp",         desc: "Espresso with caramel and milk.",                          category: ["latte"] },
+    { id: "hazelnut-latte",        name: "Hazelnut Latte",        price: 170, img: "hazelnut-latte.webp",        desc: "Nutty latte with hazelnut flavor.",                        category: ["latte"] },
+    { id: "butter-croissant",      name: "Butter Croissant",      price: 120, img: "butter-croissant.webp",      desc: "Flaky, buttery pastry.",                                   category: ["pastries", "best-seller"] },
+    { id: "chocolate-croissant",   name: "Chocolate Croissant",   price: 140, img: "chocolate-croissant.webp",   desc: "Croissant filled with chocolate.",                         category: ["pastries"] },
+    { id: "blueberry-muffin",      name: "Blueberry Muffin",      price: 110, img: "blueberry-muffin.webp",      desc: "Soft muffin with blueberries.",                            category: ["pastries"] },
+    { id: "cinnamon-roll",         name: "Cinnamon Roll",         price: 110, img: "cinnamon-roll.webp",         desc: "Sweet cinnamon-swirled roll.",                             category: ["pastries"] },
+    { id: "cheesecake-slice",      name: "Cheesecake Slice",      price: 180, img: "cheesecake-slice.webp",      desc: "Creamy cheesecake slice.",                                 category: ["pastries"] }
+];

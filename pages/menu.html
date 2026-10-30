@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/images/brand/logo.webp" type="image/webp">
+    <title>F4 - Menu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/menu.css">
+</head>
+<body data-root="../" data-require="user">
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="../index.html" aria-label="Four Leaves Café home">
+                <span class="brand-mark" aria-hidden="true">
+                    <img class="brand-logo" src="../assets/images/brand/logo.png" alt="" width="256" height="256" decoding="async">
+                </span>
+                <span class="brand-name">Four Leaves Café</span>
+            </a>
+            <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="siteNav" aria-expanded="false">&#9776;</button>
+            <nav class="site-nav" id="siteNav" aria-label="Main">
+                <a href="menu.html" aria-current="page">Menu</a>
+                <a href="orders.html">My Orders</a>
+                <a href="checkout.html">Cart<span class="cart-count" data-cart-count>0</span></a>
+                <a href="../index.html" data-logout>Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="page-head">
+                <h1 class="page-title">Our Menu</h1>
+                <p class="page-sub">Freshly brewed coffee and baked pastries, made for you.</p>
+            </div>
+            <section class="menu-top" aria-label="Search and filter">
+                <div class="search-box">
+                    <img src="../assets/images/icons/search.png" alt="">
+                    <label class="sr-only" for="searchInput">Search menu</label>
+                    <input type="search" id="searchInput" placeholder="Search coffee, pastries...">
+                </div>
+                <div class="chips" role="group" aria-label="Categories">
+                    <button type="button" class="chip active" data-filter="all" aria-pressed="true">All</button>
+                    <button type="button" class="chip" data-filter="best-seller" aria-pressed="false">Best Seller</button>
+                    <button type="button" class="chip" data-filter="espresso" aria-pressed="false">Espresso</button>
+                    <button type="button" class="chip" data-filter="latte" aria-pressed="false">Latte</button>
+                    <button type="button" class="chip" data-filter="coldbrew" aria-pressed="false">Cold Brew</button>
+                    <button type="button" class="chip" data-filter="pastries" aria-pressed="false">Pastries</button>
+                </div>
+            </section>
+            <section class="product-grid" id="productGrid" aria-live="polite"></section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms</a>
+                <span>&copy; 2026 Four Leaves Café. All rights reserved.</span>
+            </div>
+            <div class="socials"><a href="#" aria-label="Instagram"><img src="../assets/images/icons/instagram.png" alt=""></a><a href="#" aria-label="Facebook"><img src="../assets/images/icons/facebook.png" alt=""></a><a href="#" aria-label="Twitter"><img src="../assets/images/icons/twitter.png" alt=""></a><a href="#" aria-label="Youtube"><img src="../assets/images/icons/youtube.png" alt=""></a></div>
+        </div>
+    </footer>
+
+    <script src="../js/products.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/menu.js"></script>
+</body>
+</html>

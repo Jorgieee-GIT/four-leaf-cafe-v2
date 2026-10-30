@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/images/brand/logo.webp" type="image/webp">
+    <title>F4 - Checkout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/checkout.css">
+</head>
+<body data-root="../" data-require="user">
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="../index.html" aria-label="Four Leaves Café home">
+                <span class="brand-mark" aria-hidden="true">
+                    <img class="brand-logo" src="../assets/images/brand/logo.png" alt="" width="256" height="256" decoding="async">
+                </span>
+                <span class="brand-name">Four Leaves Café</span>
+            </a>
+            <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="siteNav" aria-expanded="false">&#9776;</button>
+            <nav class="site-nav" id="siteNav" aria-label="Main">
+                <a href="menu.html">Menu</a>
+                <a href="orders.html">My Orders</a>
+                <a href="checkout.html" aria-current="page">Cart<span class="cart-count" data-cart-count>0</span></a>
+                <a href="../index.html" data-logout>Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="page-head"><h1 class="page-title">Checkout</h1></div>
+        <div class="checkout-layout">
+            <section class="cart-section" aria-labelledby="cartTitle">
+                <h2 id="cartTitle">Your Cart</h2>
+                <div id="checkoutCart"></div>
+            </section>
+
+            <section class="checkout-section">
+                <form id="checkoutForm" novalidate>
+                    <h2>Shipping Information</h2>
+                    <div class="form-row">
+                        <input type="text" id="shipFirst" placeholder="First Name" aria-label="First name" autocomplete="given-name" required>
+                        <input type="text" id="shipLast" placeholder="Last Name" aria-label="Last name" autocomplete="family-name" required>
+                    </div>
+                    <input type="text" id="shipAddress1" placeholder="Address Line 1" aria-label="Address line 1" autocomplete="address-line1" required>
+                    <div class="form-row">
+                        <input type="text" id="shipCity" placeholder="City" aria-label="City" required>
+                        <input type="text" id="shipProvince" placeholder="Province" aria-label="Province" required>
+                        <input type="text" id="shipZip" placeholder="ZIP Code" aria-label="ZIP code" inputmode="numeric" required>
+                    </div>
+                    <div class="same-billing">
+                        <input type="checkbox" id="sameBilling">
+                        <label for="sameBilling">Same as Shipping for Billing</label>
+                    </div>
+
+                    <h2>Billing Information</h2>
+                    <div class="form-row">
+                        <input type="text" id="billFirst" placeholder="First Name" aria-label="First name" autocomplete="given-name" required>
+                        <input type="text" id="billLast" placeholder="Last Name" aria-label="Last name" autocomplete="family-name" required>
+                    </div>
+                    <input type="text" id="billAddress1" placeholder="Address Line 1" aria-label="Address line 1" autocomplete="address-line1" required>
+                    <div class="form-row">
+                        <input type="text" id="billCity" placeholder="City" aria-label="City" required>
+                        <input type="text" id="billProvince" placeholder="Province" aria-label="Province" required>
+                        <input type="text" id="billZip" placeholder="ZIP Code" aria-label="ZIP code" inputmode="numeric" required>
+                    </div>
+                    <div class="order-summary">
+                        <h3>Order Summary</h3>
+                        <p><span>Items</span><span>₱<span id="itemsTotal">0.00</span></span></p>
+                        <p><span>Shipping Fee</span><span>₱<span id="shippingFee">0.00</span></span></p>
+                        <hr>
+                        <h4>Total Amount: ₱<span id="grandTotal">0.00</span></h4>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-block" id="openModal">Proceed to Checkout</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms</a>
+                <span>&copy; 2026 Four Leaves Café. All rights reserved.</span>
+            </div>
+            <div class="socials"><a href="#" aria-label="Instagram"><img src="../assets/images/icons/instagram.png" alt=""></a><a href="#" aria-label="Facebook"><img src="../assets/images/icons/facebook.png" alt=""></a><a href="#" aria-label="Twitter"><img src="../assets/images/icons/twitter.png" alt=""></a><a href="#" aria-label="Youtube"><img src="../assets/images/icons/youtube.png" alt=""></a></div>
+        </div>
+    </footer>
+
+    <div class="modal" id="paymentModal" role="dialog" aria-modal="true" aria-labelledby="payTitle">
+        <form class="modal-content" id="paymentForm">
+            <button type="button" class="close-modal" id="closeModal" aria-label="Close">&times;</button>
+            <h2 id="payTitle">Payment Details</h2>
+            <div class="card-logos" aria-label="Accepted cards"><span>VISA</span><span>BDO</span><span>LANDBANK</span></div>
+            <input type="text" placeholder="Card Name" aria-label="Card name" autocomplete="cc-name" required>
+            <input type="text" placeholder="Card Number" aria-label="Card number" inputmode="numeric" maxlength="19" autocomplete="cc-number" required>
+            <div class="modal-form-row">
+                <input type="text" placeholder="MM/YY" aria-label="Expiry" maxlength="5" autocomplete="cc-exp" required>
+                <input type="text" placeholder="CVC" aria-label="CVC" inputmode="numeric" maxlength="4" autocomplete="cc-csc" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Confirm Payment</button>
+        </form>
+    </div>
+
+    <script src="../js/products.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/checkout.js"></script>
+</body>
+</html>

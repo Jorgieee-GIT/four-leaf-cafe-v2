@@ -1,0 +1,47 @@
+.menu-top { display: grid; gap: 1.1rem; padding-block: 1.5rem .5rem; }
+.search-box { display: flex; align-items: center; gap: .7rem; width: 100%; max-width: 560px; background: var(--soft); border: 1.5px solid var(--line); border-radius: var(--pill); padding: .2rem 1.25rem; transition: border-color .2s ease, box-shadow .2s ease; }
+.search-box:focus-within { border-color: var(--smoky-black); box-shadow: 0 0 0 4px color-mix(in srgb, var(--bone) 70%, transparent); }
+.search-box img { width: 18px; height: 18px; opacity: .6; }
+.search-box input { border: 0 !important; background: transparent !important; box-shadow: none !important; padding: .8rem 0 !important; }
+.chips { display: flex; gap: .55rem; overflow-x: auto; padding-bottom: .35rem; scrollbar-width: none; }
+.chips::-webkit-scrollbar { display: none; }
+.chip { flex: 0 0 auto; padding: .6rem 1.3rem; border-radius: var(--pill); border: 1.5px solid var(--line); background: var(--floral-white); font: 600 .88rem var(--font); color: var(--olive-drab); cursor: pointer; transition: all .2s ease; }
+.chip:hover { border-color: var(--olive-drab); color: var(--smoky-black); }
+.chip.active { background: var(--smoky-black); border-color: var(--smoky-black); color: var(--floral-white); }
+
+.product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1.5rem; padding-block: 1.75rem 4rem; }
+.product-card { display: flex; flex-direction: column; background: var(--floral-white); border: 1px solid var(--line); border-radius: var(--radius); padding: .65rem; transition: transform .3s ease, box-shadow .3s ease; }
+.product-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
+.product-link { display: flex; flex-direction: column; flex: 1; text-decoration: none; }
+.product-media { border-radius: 16px; overflow: hidden; background: var(--bone); }
+.product-media img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: transform .6s ease; }
+.product-card:hover .product-media img { transform: scale(1.06); }
+.product-body { display: flex; flex-direction: column; flex: 1; gap: .35rem; padding: 1rem .5rem .4rem; }
+.product-body h3 { font-size: 1.1rem; letter-spacing: -0.02em; }
+.product-body p { flex: 1; font-size: .85rem; color: var(--olive-drab); line-height: 1.5; }
+.product-foot { display: flex; align-items: center; justify-content: space-between; gap: .5rem; padding: .5rem .5rem .4rem; }
+.price { font-size: 1.25rem; font-weight: 800; letter-spacing: -0.02em; }
+.no-results { grid-column: 1 / -1; text-align: center; padding: 3rem 1rem; background: var(--soft); border: 1px dashed var(--olive-drab); border-radius: var(--radius); }
+.no-results h3 { font-size: 1.4rem; margin-bottom: .5rem; }
+.no-results p { color: var(--olive-drab); }
+
+@media (max-width: 560px) {
+    .product-grid { grid-template-columns: repeat(2, 1fr); gap: .85rem; }
+    .product-card { padding: .5rem; border-radius: 18px; }
+    .product-body { padding-inline: .3rem; }
+    .product-body h3 { font-size: .95rem; }
+    .product-body p { display: none; }
+    .product-foot { padding-inline: .3rem; }
+    .price { font-size: 1.05rem; }
+}
+
+/* Unified café catalog surfaces and controls. */
+.menu-top { padding-block: 1.6rem 1rem; }
+.search-box { background: var(--floral-white); border-color: var(--line-strong); }
+.chip { border-color: var(--line-strong); }
+.chip.active { background: var(--olive-drab); border-color: var(--olive-drab); }
+.product-card { border-color: var(--line-strong); }
+.product-card:hover { border-color: var(--olive-drab); }
+.product-media { background: var(--brand-beige); }
+.product-foot { border-top: 1px solid var(--line); margin-top: .4rem; padding-top: .85rem; }
+.no-results { background: var(--soft); border-color: var(--line-strong); }
